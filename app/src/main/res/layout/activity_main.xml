@@ -8,84 +8,51 @@
     tools:context="fm.ua.ulch.horoscope.MainActivity">
 
     <ImageView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:src="@drawable/zodiac_circle"
-       android:scaleType="centerCrop"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/zodiac_circle"/>
 
     <Button
-            android:id="@+id/buttonAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/all"
-            android:layout_gravity="left|bottom"
-            android:layout_alignParentBottom="true"
-            android:background="@android:color/darker_gray"
-            android:layout_alignStart="@+id/linearLayout"/>
+        android:id="@+id/buttonAll"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_gravity="left|bottom"
+        android:background="@drawable/button"
+        android:textColor="@color/text"
+        android:text="@string/all"/>
 
-        <Button
-            android:id="@+id/buttonSubmit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/submit"
-            android:layout_gravity="right|bottom"
-            android:layout_alignParentBottom="true"
-            android:background="@android:color/darker_gray"
-            android:layout_alignEnd="@+id/linearLayout"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/linearLayout"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp">
-
-        <Spinner
-            android:id="@+id/days"
-            android:layout_width="80dp"
-            android:layout_margin="10dp"
-            android:textAlignment="center"
-            android:background="@android:color/darker_gray"
-            android:layout_height="40dp"
-            />
-        <Spinner
-            android:id="@+id/months"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:background="@android:color/darker_gray"
-            android:layout_gravity="center"/>
-
-        <Spinner
-            android:id="@+id/years"
-            android:layout_width="90dp"
-            android:layout_margin="10dp"
-            android:textAlignment="center"
-            android:background="@android:color/darker_gray"
-            android:layout_height="40dp"
-            />
-    </LinearLayout>
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/button"
+        android:textColor="@color/text"
+        android:text="@string/submit"/>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_text"
-        android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal|top"
-        android:textSize="36sp"
-        android:textAlignment="center"
-        android:id="@+id/textView"
-        android:layout_marginTop="72dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="72dp"
+        android:text="@string/main_text"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"/>
 
-
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:calendarViewShown="false"/>
 </RelativeLayout>

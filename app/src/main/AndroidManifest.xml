@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SignActivity">
+        <activity android:name=".SignActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 
